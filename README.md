@@ -18,22 +18,26 @@
 # 設定 Scoop 安裝程式包目錄路徑
 # $scoopPath       = 'C:\bway\cwapp\scoop'
 # $scoopGlobalPath = 'C:\bway\cwapp\scoop_global'
-# 預設安裝程式包桶: extras
+# 預設安裝程式包桶子: extras
 # 預設安裝程式包: git, wsltty
 iwr https://raw.githubusercontent.com/BwayCer/scoopBucket.env/main/bin/installTerminal.ps1 | iex
 ```
 
-**下載本專案程式包桶：**
+**安裝常用程式包：**
 
-關於 Buckets 的資訊請見 [GitHub lukesampson/scoop/wiki/Buckets](https://github.com/lukesampson/scoop/wiki/Buckets)。
-
-```sh
-# BwayCer 的自製桶
-# 當程式包名稱相同時會依照 bucket 的名稱排序來選擇參考的 JSON 文件，
-# 其中數字又優先於英文字母。
-# 為避免此種情況發生，建議使用 `scoop install <bucket>/<package>` 的命令方式。
-scoop bucket add bway https://github.com/BwayCer/scoopBucket.env
+```ps1
+iwr https://raw.githubusercontent.com/BwayCer/scoopBucket.env/main/bin/installCommonPackages.ps1 | iex
 ```
+
+
+**相關說明：**
+
+  * 關於應用清單的規範請見 [GitHub lukesampson/scoop/wiki/App-Manifests](https://github.com/lukesampson/scoop/wiki/App-Manifests)。
+  * 關於程式包桶子的資訊請見 [GitHub lukesampson/scoop/wiki/Buckets](https://github.com/lukesampson/scoop/wiki/Buckets)。
+  * 當程式包名稱相同時會依照 bucket 的名稱排序來選擇參考的 JSON 文件，
+    其中數字又優先於英文字母。
+    為避免此種情況發生，
+    建議使用 `scoop install <bucket>/<package>` 的命令方式。
 
 
 
@@ -44,7 +48,7 @@ scoop bucket add bway https://github.com/BwayCer/scoopBucket.env
   * [Surface 鍵盤以設定鍵交換右邊 Ctrl 鍵的鍵盤布局](./bin/surfaceAddRightCtrl.reg)
 * 視窗語法
   * [鍵盤布局登入文件](./looseLeaf/windowsCode/keyboardLayoutRegistry.md)
-* Bucket
+* 程式包桶子
   * bway
     * [Ultimate Windows Context Menu Customizer](./looseLeaf/bucket/ultimate-windows-context-menu-customizer.md)
 
