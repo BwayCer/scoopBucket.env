@@ -46,5 +46,5 @@ scoop bucket add bway https://github.com/BwayCer/scoopBucket.env
   * [鍵盤布局登入文件](./looseLeaf/windowsCode/keyboardLayoutRegistry.md)
 * Bucket
   * bway
-    * [Windows Context Menu 訂製工具](./looseLeaf/bucket/ultimate-windows-context-menu-customizer.md)
+    * [Ultimate Windows Context Menu Customizer](./looseLeaf/bucket/ultimate-windows-context-menu-customizer.md)
 
