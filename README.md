@@ -50,5 +50,7 @@ iwr https://raw.githubusercontent.com/BwayCer/scoopBucket.env/main/bin/installCo
   * [鍵盤布局登入文件](./looseLeaf/windowsCode/keyboardLayoutRegistry.md)
 * 程式包桶子
   * bway
+    * [.NET Runtime](./looseLeaf/bucket/dotnet-desktop-runtime.md)
+    * [PowerToys](./looseLeaf/bucket/powertoys.md)
     * [Ultimate Windows Context Menu Customizer](./looseLeaf/bucket/ultimate-windows-context-menu-customizer.md)
 
