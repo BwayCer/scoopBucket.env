@@ -47,6 +47,7 @@ iwr https://raw.githubusercontent.com/BwayCer/scoopBucket.env/main/bin/installCo
 * bin
   * [Surface 鍵盤以設定鍵交換右邊 Ctrl 鍵的鍵盤布局](./bin/surfaceAddRightCtrl.reg)
 * 視窗語法
+  * [Scoop 安裝工具](./looseLeaf/windowsCode/scoopInstaller.md)
   * [鍵盤布局登入文件](./looseLeaf/windowsCode/keyboardLayoutRegistry.md)
 * 程式包桶子
   * bway
