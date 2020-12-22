@@ -1,0 +1,56 @@
+{
+    "homepage": "https://developer.android.com/studio#command-tools",
+    "version": "6858069",
+    "description": "The basic Android command line tools.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://developer.android.com/studio/terms.html"
+    },
+    "depends": "java/openjdk",
+    "url": "https://dl.google.com/android/repository/commandlinetools-win-6858069_latest.zip",
+    "hash": "d2f6c9bb7db0362995c0b8dd2fd5949ce23c1dccb7f9392350b5e29b6d5fec7d",
+    "installer": {
+        "script": [
+            "Move-Item \"$dir\\cmdline-tools\" \"$dir\\latest\"",
+            "New-Item \"$dir\\cmdline-tools\" -ItemType Directory | Out-Null",
+            "Move-Item \"$dir\\latest\" \"$dir\\cmdline-tools\""
+        ]
+    },
+    "bin": [
+        [
+            "./cmdline-tools/latest/bin/avdmanager.bat",
+            "avdmanager"
+        ],
+        [
+            "./cmdline-tools/latest/bin/sdkmanager.bat",
+            "sdkmanager"
+        ]
+    ],
+    "persist": [
+        "./build-tools",
+        "./emulator",
+        "./licenses",
+        "./patcher",
+        "./platform-tools",
+        "./platforms",
+        "./system-images",
+        "./sdkHome"
+    ],
+    "post_install": [
+        "$env:ANDROID_SDK_ROOT = \"$dir\"",
+        "$env:ANDROID_SDK_HOME = \"$dir\\sdkHome\"",
+        "Set-Location \"$dir\\cmdline-tools\\latest\\bin\"",
+        ".\\sdkmanager.bat \"platform-tools\"",
+        ".\\sdkmanager.bat \"emulator\""
+    ],
+    "checkver": {
+        "regex": "commandlinetools-win-(\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://dl.google.com/android/repository/commandlinetools-win-$version_latest.zip",
+        "hash": {
+            "url": "https://developer.android.com/studio",
+            "find": "commandlinetools-win(?:.*\\n){3}.*<td>($sha256)"
+        }
+    }
+}
