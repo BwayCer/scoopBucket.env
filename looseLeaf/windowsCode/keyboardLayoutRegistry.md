@@ -8,20 +8,25 @@
 ## 使用方式
 
 
+將下述寫法說明並以副檔名 `.reg` 文件儲存，
+然後執行該文件即可變更鍵盤布局。
+
+
+
 ### 寫法
 
 
 範例：
 
 ```reg
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,\
                    00,00,00,00,\
-                   05,00,00,00,\
-                   4B,E0,5D,E0,\
-                   4D,E0,4B,E0,\
-                   1D,E0,4D,E0,\
-                   5D,E0,1D,E0,\
+                   03,00,00,00,\
+                   38,00,1d,00,\
+                   38,e0,1d,e0,\
                    00,00,00,00
 ```
 
@@ -32,6 +37,19 @@
   * 第 4 行： `38,00,1d,00` 表示 Left  CTRL -> Left  ALT
   * 第 5 行： `38,e0,1d,e0` 表示 Right CTRL -> Right ALT
   * 第 6 行： `00,00,00,00` 表示結尾終止符
+
+
+還原鍵盤預設設定：
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,\
+                   00,00,00,00,\
+                   01,00,00,00,\
+                   00,00,00,00
+```
 
 
 

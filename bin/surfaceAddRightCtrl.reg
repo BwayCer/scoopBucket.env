@@ -1,6 +1,5 @@
-; Surface 鍵盤以設定鍵交換右邊 Ctrl 鍵的鍵盤布局
-
 Windows Registry Editor Version 5.00
+; Surface 鍵盤以設定鍵交換右邊 Ctrl 鍵的鍵盤布局
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,\
